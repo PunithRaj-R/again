@@ -1,0 +1,168 @@
+1st program
+
+
+
+:\Users\ranja\Desktop\git-prog>git init
+Initialized empty Git repository in C:/Users/ranja/Desktop/git-prog/.git/
+
+C:\Users\ranja\Desktop\git-prog>git config --local user.name ranjandn
+
+C:\Users\ranja\Desktop\git-prog>git config --local user.email 20cse0051@vvce.ac.in
+
+C:\Users\ranja\Desktop\git-prog>echo "hi hello" >> newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\ranja\Desktop\git-prog>git add newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   newt.txt
+
+
+C:\Users\ranja\Desktop\git-prog>git commit -m "first commit"
+[master (root-commit) 401c3a4] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\ranja\Desktop\git-prog>git log
+commit 401c3a417d1216d1dc5ba8dca807c0185e08422d (HEAD -> master)
+Author: ranjandn <20cse0051@vvce.ac.in>
+Date:   Mon Feb 5 19:34:01 2024 +0530
+
+    first commit
+
+C:\Users\ranja\Desktop\git-prog>git branch -M main
+
+C:\Users\ranja\Desktop\git-prog>git remote add origin https://github.com/Ranjandn/first.git
+
+C:\Users\ranja\Desktop\git-prog>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ranjandn/first.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\ranja\Desktop\git-prog>git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 909 bytes | 129.00 KiB/s, done.
+From https://github.com/Ranjandn/first
+ * branch            main       -> FETCH_HEAD
+   401c3a4..22e84c8  main       -> origin/main
+Updating 401c3a4..22e84c8
+Fast-forward
+ newt.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ranja\Desktop\git-prog>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\ranja\Desktop\git-prog>vi newt.txt
+'vi' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>
+
+
+=============================================================================================
+
+
+C:\Users\ranja\Desktop\git-prog>git branch b1
+
+C:\Users\ranja\Desktop\git-prog>git switch b1
+Switched to branch 'b1'
+M       newt.txt
+
+C:\Users\ranja\Desktop\git-prog>echo "ranhan" >> newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git -a -m "ranhan commit"
+unknown option: -a
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+C:\Users\ranja\Desktop\git-prog>git commit -a -m "ranhan commit"
+[b1 97e2a08] ranhan commit
+ 1 file changed, 2 insertions(+)
+
+C:\Users\ranja\Desktop\git-prog>code newt.xt
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git switch master
+fatal: invalid reference: master
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>echo "hiii" >> newt.txt
+
+C:\Users\ranja\Desktop\git-prog>echo "hewlllo' >> newt.txt
+"hewlllo' >> newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git commit -a -m "new commmit"
+[main aaf47af] new commmit
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>echo "hello" >> newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git commit -a -m "neww commit"
+[main fa81aa4] neww commit
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git switch b1
+Switched to branch 'b1'
+
+C:\Users\ranja\Desktop\git-prog>code newt.txt
+
+C:\Users\ranja\Desktop\git-prog>git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\ranja\Desktop\git-prog>git merge b1
+Auto-merging newt.txt
+CONFLICT (content): Merge conflict in newt.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\ranja\Desktop\git-prog>
+

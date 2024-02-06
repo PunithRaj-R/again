@@ -1,0 +1,65 @@
+c3 9th
+
+first download selenium and chrome driver
+
+code
+
+public static void main(String args[]) throws Exception{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Nishanth S\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		ChromeDriver d=new ChromeDriver();
+		d.manage().window().maximize();
+		d.get("http://www.vvce.ac.in/");
+		d.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		d.findElement(By.xpath("//*[@id='wpcf7-f1068-p8957-o1']/form/div[2]/div[1]/span")).click();
+		}
+
+---
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+c2 8th slac
+
+download slac 
+
+install available plugins
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+c1 mAVEN 7
+
+download elclise ide environment
+
+Create mavan project
+
+student.json:
+
+{
+"firstname":"punith",
+"lastname" :"raj"
+}
+=============================
+
+simple.java:
+
+package mon.mon;
+import java.io.*;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class Single {
+	
+		public static void main(String args[]) throws Exception, IOException, ParseException {
+			JSONObject job=(JSONObject) new JSONParser().parse(new FileReader("./json/student.json"));
+			
+			String fname=(String)job.get("firstname");
+			String lname=(String)job.get("lastname");
+			System.out.println(fname);
+			System.out.println(lname);
+		}
+	}
+====================================================================================
+
+pom file edit add dependencies
+
+
+

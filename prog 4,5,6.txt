@@ -1,0 +1,50 @@
+Program 4:  
+
+java file--> 
+
+public class doc{
+    public static void main(String args[]){
+        System.out.println("Test");
+    }
+}
+
+docker file-->
+
+FROM openjdk
+WORKDIR / app
+COPY . / app
+RUN javac doc.java
+CMD ["java","doc"]
+
+In terminal-->
+
+javac doc.java
+java doc
+docker build -t docjava .
+docker run --name javappli docjava
+
+===========================================================================================
+Program 6: continuation of 4
+
+In terminal
+
+docker tag docjava:latest           
+docker tag docjava:latest ranjandn/second
+docker push ranjandn/second
+
+======================================================================================
+Program 5: 
+
+first cmd
+--> docker pull mysql
+-->docker run -e MYSQL_ROOT_PASSWORD="root" -d mysql
+
+second cmd
+-->docker container ls
+-->docker inspect thirsty_jang
+   copy the IPaddress
+
+third cmd
+-->docker run -it mysql /bin/bash
+-->mysql -h enter the IP -u root -p
+--> show databases;
